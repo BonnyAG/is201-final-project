@@ -1,0 +1,161 @@
+/* Setting Color variables */
+:root {
+    --theme-gray: #8395a7;
+    --deco-blue: #0085A1;
+    --background-blue: #bee2eb;
+    --text-blue: #0a3d62;
+}
+
+/* Setting Default Font */
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* HEADER */
+/* Navigation Links */
+nav a img {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  border-radius: 50px;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  padding: 24px 100px;
+}
+
+.null {
+  flex-grow: 1;
+}
+
+.links nav {
+  position: relative;
+  right: 0px;
+}
+
+.links a:hover {
+  transition: .2s;
+  opacity: .6;
+}
+
+.header nav a {
+  display: inline-block;
+  margin-left: 32px;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 0.75rem;
+}
+
+/* Heading */
+.header {
+  background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2) ), url('../images/graphs.jpeg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 532px;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 900;
+  font-size: 64px;
+  color: white;
+  padding-top: 85px;
+}
+
+.subtitle {
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 300;
+  margin-top: -32px;
+}
+
+/* MAIN CONTENT */
+.main {
+  padding-top: 545px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.caption {
+    font-style: italic;
+    color: var(--theme-gray);
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  border-radius: 5px 5px 0px 0px;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: block;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0px 0px 5px 5px;
+}
+
+/* FOOTER */
+.footer {
+  border-top: 1px solid #ccc;
+  text-align: center;
+  padding: 24px 0;
+  margin-top: 32px;
+}
+
+.footer p, .footer .copyright, .footer a {
+  font-family: 'Lora', serif;
+}
+
+.footer h2 {
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.footer a {
+  color: black;
+}
+
+.footer .copyright, .footer .copyright a {
+  color: rgb(116, 116, 116);
+  font-style: italic;
+}
+
+.footer a:hover {
+  color: #0887a2;
+  transition: .1s;
+}

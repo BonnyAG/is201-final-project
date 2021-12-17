@@ -1,0 +1,217 @@
+<!-- Adam Bonny - Last Edited on December 17, 2021 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../images/logo.png" />
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../styles/bootstyles.css">
+    <title>Adam Bonny - Tableau</title>
+    <!-- Functions for the tabs -->
+    <script>
+        function loadPage() {
+            var profitsCalifornia = document.getElementById('profits-california');
+            var profitsByCategory = document.getElementById('profits-category');
+            var forecast = document.getElementById('forecast');
+
+            var defaultTab = document.getElementById("defaul-tab");
+            defaultTab.className += " active";
+            
+            profitsCalifornia.style.display = "none";
+            profitsByCategory.style.display = "none";
+            forecast.style.display = "none";
+        }
+
+        function openGraph(evt, graphName) {
+            // Declare all variables
+            var i, tabcontent, tablinks;
+
+            // Get all elements with class="tabcontent" and hide them
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Get all elements with class="tablinks" and remove the class "active"
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            // Show the current tab, and add an "active" class to the button that opened the tab
+            document.getElementById(graphName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</head>
+<body onload="loadPage()">
+    <!-- Header -->
+    <div class="header">
+        <!-- Navigation -->
+        <div class="links">
+            <!-- Logo -->
+            <a href="../index.html"><img src="../images/logo.png" height="64px" alt="Logo"></a>
+            <div class="null"></div>
+            <!-- Navigation Links -->
+            <nav>
+                <a href="../index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="#">Tableau</a>
+            </nav>
+        </div>
+        <!-- Heading -->
+        <h1>Tableau Visualizations</h1>
+        <p class="subtitle">Or fancy graphs that answer questions.</p>
+    </div>
+    <!-- Main Content -->
+    <div class="main">
+        <!-- Tab links -->
+        <div class="tab">
+            <button id="defaul-tab" class="tablinks" onclick="openGraph(event, 'profits-state')">Profits by State (US)</button>
+            <button class="tablinks" onclick="openGraph(event, 'profits-california')">Profits for California</button>
+            <button class="tablinks" onclick="openGraph(event, 'profits-category')">Profits by Category (California)</button>
+            <button class="tablinks" onclick="openGraph(event, 'forecast')">Sales Forecast for Office Supplies (California)</button>
+        </div>
+        
+        <!-- Tableau Visualizations -->
+        <div id="profits-state" class="tabcontent">
+            <!-- Visualization #1 -->
+            <div class='tableauPlaceholder' id='viz1639675568772' style='position: relative; display: block;'>
+                <noscript>
+                    <a href='#'>
+                        <img alt=' ' src='2P&#47;2PGGDKHM6&#47;1_rss.png' style='border: none' />
+                    </a>
+                </noscript>
+                <object class='tableauViz'  style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='embed_code_version' value='3' />
+                    <param name='path' value='shared&#47;2PGGDKHM6' />
+                    <param name='toolbar' value='yes' /><param name='static_image' value='2P&#47;2PGGDKHM6&#47;1.png' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='en-US' />
+                </object>
+            </div>
+            <script type='text/javascript'>
+                var divElement = document.getElementById('viz1639675568772');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+                vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+            </script>
+            <!-- Caption #1 -->
+            <p class="caption">Profits are strongest in California, with New York as a close second.</p>
+        </div>
+        
+        <div id="profits-california" class="tabcontent">
+            <!-- Visualization #2 -->
+            <div class='tableauPlaceholder' id='viz1639675988797' style='position: relative'>
+                <object class='tableauViz'  style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='embed_code_version' value='3' />
+                    <param name='site_root' value='' />
+                    <param name='name' value='Tableauforfinalproject_16395396563950&#47;ProfitsforCalifornia' />
+                    <param name='tabs' value='yes' />
+                    <param name='toolbar' value='yes' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='en-US' />
+                </object>
+            </div>
+            <script type='text/javascript'>
+                var divElement = document.getElementById('viz1639675988797');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+                vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+            </script>
+            <!-- Caption #2 -->
+            <p class="caption">Profits have been increasing since 2012, with the highest profitable month in November 2013</p>
+        </div>
+        
+        <div id="profits-category" class="tabcontent">
+            <!-- Visualization #3 -->
+            <div class='tableauPlaceholder' id='viz1639676038392' style='position: relative'>
+                <object class='tableauViz'  style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='embed_code_version' value='3' />
+                    <param name='site_root' value='' />
+                    <param name='name' value='Tableauforfinalproject_16395396563950&#47;ProfitsbyCategoryforCalifornia' />
+                    <param name='tabs' value='yes' />
+                    <param name='toolbar' value='yes' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='en-US' />
+                </object>
+            </div>
+            <script type='text/javascript'>
+                var divElement = document.getElementById('viz1639676038392');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+                vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+            </script>
+            <!-- Caption #3 -->
+            <p class="caption">The most profitable category is Office Supplies.</p>
+        </div>
+
+        <div id="forecast" class="tabcontent">
+            <!-- Visualization #4 -->
+            <div class='tableauPlaceholder' id='viz1639676140021' style='position: relative'>
+                <object class='tableauViz'  style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='embed_code_version' value='3' />
+                    <param name='site_root' value='' />
+                    <param name='name' value='Tableauforfinalproject_16395396563950&#47;ForecastforOfficeSuppliesforCalifornia' />
+                    <param name='tabs' value='yes' />
+                    <param name='toolbar' value='yes' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='en-US' />
+                </object>
+            </div>
+            <script type='text/javascript'>
+                var divElement = document.getElementById('viz1639676140021');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+                vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+            </script>
+            <!-- Caption #4 -->
+            <p class="caption">The forecast keeps the upward trend of the past several years, forecasting a high of $191,100.91</p>
+        </div>
+    </div>
+    <!-- Footer -->
+    <div class="footer">
+        <!-- Contact Info -->
+        <h2>Contact Me</h2>
+        <p>
+            <b>Email:</b> <a href="mailto:agbonnyh@gmail.com" target="_blank">agbonnyh@gmail.com</a><br>
+            <b>Phone #:</b> (385) 287-5995
+        </p>
+        <!-- Copyright -->
+        <div class="copyright">Copyright &copy; Adam Bonny 2021 - Visualizations pulled from <a href="https://public.tableau.com/en-us/s/" target="_blank">Tableau Public</a></div>
+    </div>
+</body>
+</html>

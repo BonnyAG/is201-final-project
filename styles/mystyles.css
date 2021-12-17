@@ -1,0 +1,239 @@
+/* Setting Color variables */
+:root {
+    --theme-gray: #8395a7;
+    --deco-blue: #0085A1;
+    --background-blue: #bee2eb;
+    --text-blue: #0a3d62;
+}
+
+/* Navigation */
+nav a img {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    border-radius: 50px;
+}
+
+nav a:hover {
+    transition: 0.2s;
+    opacity: 70%;
+}
+
+/* INDEX PAGE */
+/* Anchor Links */
+.anchors {
+    text-align: center;
+    margin-top: 12px;
+    background-color: var(--background-blue);
+    color: var(--text-blue);
+    padding: 12px;
+    border-radius: 12px;
+}
+
+.anchors a {
+    color: var(--text-blue);
+    margin: 0px 18px;
+}
+
+.anchors li {
+    display: inline-block;
+}
+
+/* Resume */
+.resume-subtitle {
+    font-size: 1.15rem;
+    font-style: italic;
+    color: var(--theme-gray);
+}
+
+ol a {
+    text-decoration: underline;
+}
+
+#work ul li::before, #skills ul li::before {
+    content: "•";
+    color: var(--deco-blue);
+    padding-right: 8px;
+}
+
+ul {
+    margin-top: 12px;
+    list-style: none;
+}
+
+ol {
+    margin-left: -18px;
+}
+
+ol h4 {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+li {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+/* Decorating lines for main sections */
+.decoration-marker {
+    display: float;
+    float: left;
+    background-color: var(--deco-blue);
+    height: 3px; width: 64px;
+    border-radius: 3px;
+}
+
+.decoration-line {
+    margin-top: 9px;
+}
+
+/* Work Section */
+#work {
+    margin-top: 32px;
+}
+
+iframe {
+    border-radius: 5px;
+    width: 100%;
+    height: 384px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+#powell {
+    margin-top: 24px;
+}
+
+#mission {
+    margin-top: 24px;
+}
+
+/* Education Section */
+#education ul {
+    list-style: none;
+    margin-left: -32px;
+}
+
+#education li, #education p {
+    font-style: italic;
+    color: var(--theme-gray);
+}
+
+#education b {
+    font-style: normal;
+    color: black;
+}
+
+#education p {
+    margin-top: 10px;
+}
+
+/* Skills Section */
+#skills h4 {
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.categories {
+    margin-bottom: 18px;
+}
+
+.card {
+    padding: 2px 6px;
+    font-size: 16px;
+    background-color: var(--background-blue);
+    color: var(--text-blue);
+    display: inline-block;
+    border-radius: 3px;
+    border: none;
+}
+
+/* ABOUT PAGE */
+/* Image styling */
+.image-container p {
+    font-style: italic;
+    color: var(--theme-gray);
+    font-size: 14px;
+    text-align: center;
+}
+
+img {
+    border-radius: 3px;
+}
+
+#me {
+    float: left;
+    padding-right: 32px;
+}
+
+#temple {
+    float: right;
+    padding-left: 32px; 
+    margin-top: 48px;
+}
+
+/* Contact Section */
+.contact {
+    text-align: center;
+    margin-top: 24px;
+}
+
+/* Responsiveness for images */
+@media screen and (max-width: 1390px) {
+    #family {
+        width: 580px;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    #family {
+        width: 550px;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    #family {
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    #family {
+        width: 440px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .image-container {
+        text-align: center;
+    }
+
+    #me, #temple {
+        display: block;
+        float: none;
+        padding-right: 0px;
+        padding-left: 0px;
+        margin: 0 auto;
+    }
+
+    #temple {
+        margin-bottom: -32px;
+        margin-top: 12px
+    }
+
+    #family {
+        width: 355px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    #family {
+        width: 325px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    #family {
+        width: 275px;
+    }
+}
